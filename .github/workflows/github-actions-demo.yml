@@ -1,0 +1,10 @@
+name: Simple File Listing
+on: [push]
+jobs:
+  list-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ckeck out repository code
+        uses: actions/checkout@v4
+      - name: List files in the repository
+        run: ls -la
